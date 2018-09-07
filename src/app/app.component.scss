@@ -1,0 +1,15 @@
+::-webkit-scrollbar {
+    display:none;
+}
+
+myapp {
+    #cabecalho-menu .item-inner {
+        border: none;
+    }
+    .cabecalho-menu {
+        background-image: url('../assets/imgs/menu-title.jpg');
+        height: 150px;
+        width: auto;
+        margin-bottom: 10px;
+    }
+}
