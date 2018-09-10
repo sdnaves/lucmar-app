@@ -8,6 +8,7 @@ import { ListaClientesPage } from '../pages/lista-clientes/lista-clientes';
 import { ListaFornecedoresPage } from '../pages/lista-fornecedores/lista-fornecedores';
 import { ListaPedidosPage } from '../pages/lista-pedidos/lista-pedidos';
 import { CadastroPedidosPage } from '../pages/cadastro-pedidos/cadastro-pedidos';
+import { SettingsPage } from '../pages/settings/settings';
 
 @Component({
   selector: 'myapp',
@@ -26,10 +27,11 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage, icon: 'home' },
-      { title: 'Clientes', component: ListaClientesPage.name, icon: 'person' },
-      { title: 'Fornecedores', component: ListaFornecedoresPage.name },
-      { title: 'Pedidos', component: ListaPedidosPage.name },
-      { title: 'Cadastro', component: CadastroPedidosPage.name }
+      { title: 'Novo Pedido', component: CadastroPedidosPage.name, icon: 'paper' },
+      { title: 'Pedidos', component: ListaPedidosPage.name, icon: 'list-box' },
+      { title: 'Clientes', component: ListaClientesPage.name, icon: 'people' },
+      { title: 'Fornecedores', component: ListaFornecedoresPage.name, icon: 'briefcase' },
+      { title: 'Configurações', component: SettingsPage.name, icon: 'settings' }
     ];
 
   }

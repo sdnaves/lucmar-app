@@ -3,10 +3,10 @@
     <ion-content>
       <ion-item id="cabecalho-menu" class="cabecalho-menu">
       </ion-item>
-      <ion-list>
-        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-          <ion-icon [name]="p.icon" item-left></ion-icon>
-          {{p.title}}
+      <ion-list class="lista-menu">
+        <button menuClose ion-item *ngFor="let page of pages" (click)="openPage(page)">
+          <ion-icon [name]="page.icon" item-left></ion-icon>
+          {{ page.title }}
         </button>
       </ion-list>
     </ion-content>

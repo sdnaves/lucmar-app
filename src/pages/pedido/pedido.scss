@@ -1,0 +1,19 @@
+page-pedido {
+    .avatar-wrapper {
+        position: relative;
+        width: 200px;
+        margin: auto;
+
+        ion-avatar img {
+            background-color: #DDDDDD;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+    }
+    .item-dados {
+        .item-preco {
+            text-align: right;
+        }
+    }
+}

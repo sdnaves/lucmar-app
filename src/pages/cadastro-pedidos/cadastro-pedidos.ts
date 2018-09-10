@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the CadastroPedidosPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { itemEstoque } from '../../models/item-estoque';
+import { PedidoPage } from '../pedido/pedido';
 
 @IonicPage()
 @Component({
@@ -15,11 +10,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CadastroPedidosPage {
 
+  public estoque: itemEstoque[]; 
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.estoque = [
+      { id: 1, foto: '../../assets/imgs/menu-title.jpg', nome: 'Teste - 1', preco: 100, ativo: true },
+      { id: 2, foto: '../../assets/imgs/menu-title.jpg', nome: 'Teste - 2', preco: 200, ativo: true },
+      { id: 3, foto: '../../assets/imgs/menu-title.jpg', nome: 'Teste - 3', preco: 300, ativo: true },
+      { id: 4, foto: '../../assets/imgs/menu-title.jpg', nome: 'Teste - 4', preco: 400, ativo: true }
+    ];
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CadastroPedidosPage');
+  confirmaPedido(item: itemEstoque) {
+    this.navCtrl.push(PedidoPage.name, { itemSelecionado: item });
   }
-
 }

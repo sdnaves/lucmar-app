@@ -1,14 +1,14 @@
 webpackJsonp([1],{
 
-/***/ 275:
+/***/ 279:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListaFornecedoresPageModule", function() { return ListaFornecedoresPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PedidoPageModule", function() { return PedidoPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lista_fornecedores__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pedido__ = __webpack_require__(195);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +18,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ListaFornecedoresPageModule = /** @class */ (function () {
-    function ListaFornecedoresPageModule() {
+var PedidoPageModule = /** @class */ (function () {
+    function PedidoPageModule() {
     }
-    ListaFornecedoresPageModule = __decorate([
+    PedidoPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__lista_fornecedores__["a" /* ListaFornecedoresPage */],
+                __WEBPACK_IMPORTED_MODULE_2__pedido__["a" /* PedidoPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__lista_fornecedores__["a" /* ListaFornecedoresPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__pedido__["a" /* PedidoPage */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__lista_fornecedores__["a" /* ListaFornecedoresPage */]
+                __WEBPACK_IMPORTED_MODULE_2__pedido__["a" /* PedidoPage */]
             ]
         })
-    ], ListaFornecedoresPageModule);
-    return ListaFornecedoresPageModule;
+    ], PedidoPageModule);
+    return PedidoPageModule;
 }());
 
-//# sourceMappingURL=lista-fornecedores.module.js.map
+//# sourceMappingURL=pedido.module.js.map
 
 /***/ })
 

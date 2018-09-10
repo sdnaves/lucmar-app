@@ -3,13 +3,15 @@
 }
 
 myapp {
-    #cabecalho-menu .item-inner {
-        border: none;
-    }
+
     .cabecalho-menu {
         background-image: url('../assets/imgs/menu-title.jpg');
-        height: 150px;
+        height: 200px;
         width: auto;
         margin-bottom: 10px;
+    }
+
+    .item-md.item-block .item-inner {
+        border: none;
     }
 }
