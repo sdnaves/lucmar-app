@@ -8,13 +8,14 @@
 </ion-header>
 
 <ion-content padding>
-  <div class="estoque">
-    <div class="estoque-item" *ngFor="let item of estoque">
-      <ion-card (click)="confirmaPedido(item)">
-        <img class="estoque-img" src="{{ item.foto }}" alt="{{ item.nome }}">
-        <h2 class="estoque-nome">{{ item.nome }}</h2>
-        <h2 class="estoque-preco">R$ {{ item.preco }}</h2>
-      </ion-card>
-    </div>
+  <div class="estoque-item" *ngFor="let item of estoque">
+    <ion-card>
+      <img class="estoque-img" src="{{ item.foto }}" alt="{{ item.nome }}">
+      <div class="estoque-dados">
+        <h4>{{ item.nome }}</h4>
+        <h2>R$ {{ item.preco }}</h2>
+        <button ion-button (click)="confirmaPedido(item)">Confirmar</button>
+      </div>
+    </ion-card>
   </div>
 </ion-content>

@@ -1,22 +1,36 @@
-.estoque {
-    display: flex;
-    flex-wrap: wrap;
-}
-.estoque-item {
-    width: 50%;
-}
 .estoque-item ion-card {
-    height: 175px;
-}
-.estoque-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100px;
-    height: 125px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-.estoque-nome, .estoque-preco {
-    padding-left: 10px;
+    height: 130px;
+
+    .estoque-img, .estoque-dados {
+        float: left;
+        width: 50%;
+        height: 100%;
+        padding: 15px;
+    }
+
+    .estoque-dados {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        h4 {
+            width: 100%;
+            font-size: 14px;
+            height: 40px;
+        }
+    
+        h2 {
+            width: 100%;
+            height: 25px;
+            font-size: 20px;
+            text-align: right;
+            color: color($colors, 'secondary');
+        }
+
+        button {
+            width: 100%;
+            height: 25px;
+            align-self: flex-end;
+        }
+    }
 }
