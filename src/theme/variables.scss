@@ -37,6 +37,7 @@ $font-family-wp-base:  'Roboto';
 
 $colors: (
   primary:    #10a3ff,
+  statusBar:  #0f96fa,
   secondary:  #ff9f19,
   black:      #000000,
   danger:     #f53d3d,
@@ -49,19 +50,13 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-$button-ios-background-color-hover: color($colors, 'secondary');
-
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
-$button-md-background-color-hover: color($colors, 'secondary');
-
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
-
-$button-wp-background-color-hover: color($colors, 'secondary');
 
 // App Theme
 // --------------------------------------------------
