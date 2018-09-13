@@ -7,7 +7,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content overflow-scroll="false" has-bouncing="true" padding>
   <div class="estoque-item" *ngFor="let item of estoque">
     <ion-card>
       <img class="estoque-img" src="{{ item.foto }}" alt="{{ item.nome }}">
