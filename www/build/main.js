@@ -30,19 +30,19 @@ var map = {
 		4
 	],
 	"../pages/lista-fornecedores/lista-fornecedores.module": [
-		277,
+		280,
 		3
 	],
 	"../pages/lista-pedidos/lista-pedidos.module": [
-		278,
+		279,
 		2
 	],
 	"../pages/pedido/pedido.module": [
-		279,
+		277,
 		1
 	],
 	"../pages/settings/settings.module": [
-		280,
+		278,
 		0
 	]
 };
@@ -122,10 +122,12 @@ var CadastroPedidosPage = /** @class */ (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.estoque = [
-            { id: 1, foto: '../../assets/imgs/menu-title.jpg', nome: 'Teste - 1', preco: 100, ativo: true },
-            { id: 2, foto: '../../assets/imgs/menu-title.jpg', nome: 'Teste - 2', preco: 200, ativo: true },
-            { id: 3, foto: '../../assets/imgs/menu-title.jpg', nome: 'Teste - 3', preco: 300, ativo: true },
-            { id: 4, foto: '../../assets/imgs/menu-title.jpg', nome: 'Teste - 4', preco: 400, ativo: true }
+            { id: 1, foto: '../../assets/imgs/menu-title.jpg', nome: 'Teste - 1', preco: '100,00', ativo: true },
+            { id: 2, foto: '../../assets/imgs/menu-title.jpg', nome: 'Teste - 2', preco: '200,00', ativo: true },
+            { id: 3, foto: '../../assets/imgs/menu-title.jpg', nome: 'Teste - 3', preco: '300,00', ativo: true },
+            { id: 4, foto: '../../assets/imgs/menu-title.jpg', nome: 'Teste - 4', preco: '400,00', ativo: true },
+            { id: 5, foto: '../../assets/imgs/menu-title.jpg', nome: 'Teste - 5', preco: '500,00', ativo: true },
+            { id: 6, foto: '../../assets/imgs/menu-title.jpg', nome: 'Teste - 6', preco: '600,00', ativo: true }
         ];
     }
     CadastroPedidosPage.prototype.confirmaPedido = function (item) {
@@ -135,9 +137,10 @@ var CadastroPedidosPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-cadastro-pedidos',template:/*ion-inline-start:"C:\Users\silas.naves\Documents\ionic\lucmar-app\src\pages\cadastro-pedidos\cadastro-pedidos.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Novo Pedido</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <div class="estoque-item" *ngFor="let item of estoque">\n\n    <ion-card>\n\n      <img class="estoque-img" src="{{ item.foto }}" alt="{{ item.nome }}">\n\n      <div class="estoque-dados">\n\n        <h4>{{ item.nome }}</h4>\n\n        <h2>R$ {{ item.preco }}</h2>\n\n        <button ion-button (click)="confirmaPedido(item)">Confirmar</button>\n\n      </div>\n\n    </ion-card>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\silas.naves\Documents\ionic\lucmar-app\src\pages\cadastro-pedidos\cadastro-pedidos.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
     ], CadastroPedidosPage);
     return CadastroPedidosPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=cadastro-pedidos.js.map
@@ -170,7 +173,7 @@ var PedidoPage = /** @class */ (function () {
     }
     PedidoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-pedido',template:/*ion-inline-start:"C:\Users\silas.naves\Documents\ionic\lucmar-app\src\pages\pedido\pedido.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <ion-title>{{ item.nome }}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-item no-lines>\n\n    <div class="avatar-wrapper">\n\n      <ion-avatar>\n\n        <img src="{{ item.foto }}">\n\n      </ion-avatar>\n\n    </div>\n\n  </ion-item>\n\n  <ion-card class="item-dados">\n\n    <ion-item>{{ item.nome }}</ion-item>\n\n    <ion-item class="item-quantidade">\n\n        <ion-label color="black">Quantidade:</ion-label>\n\n        <ion-input [(ngModel)]="quantidade" name="quantidade"></ion-input>\n\n    </ion-item>\n\n    <ion-item-divider></ion-item-divider>\n\n    <ion-item class="item-preco">R$ {{ item.preco }}</ion-item>\n\n  </ion-card>\n\n\n\n  <ion-fab right bottom>\n\n    <button ion-fab>\n\n      <ion-icon name="add"></ion-icon>\n\n    </button>\n\n  </ion-fab>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\silas.naves\Documents\ionic\lucmar-app\src\pages\pedido\pedido.html"*/,
+            selector: 'page-pedido',template:/*ion-inline-start:"C:\Users\silas.naves\Documents\ionic\lucmar-app\src\pages\pedido\pedido.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <ion-title>{{ item.nome }}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-item no-lines>\n\n    <div class="avatar-wrapper">\n\n      <ion-avatar>\n\n        <img src="{{ item.foto }}">\n\n      </ion-avatar>\n\n    </div>\n\n  </ion-item>\n\n  <ion-card class="item-dados">\n\n    <ion-item>{{ item.nome }}</ion-item>\n\n    <ion-item class="item-quantidade">\n\n        <ion-label color="black">Quantidade:</ion-label>\n\n        <ion-input type="number" maxlength="3" [(ngModel)]="quantidade" name="quantidade"></ion-input>\n\n    </ion-item>\n\n    <ion-item-divider></ion-item-divider>\n\n    <ion-item class="item-preco">R$ {{ item.preco }}</ion-item>\n\n  </ion-card>\n\n\n\n  <ion-fab right bottom>\n\n    <button ion-fab>\n\n      <ion-icon name="add"></ion-icon>\n\n    </button>\n\n  </ion-fab>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\silas.naves\Documents\ionic\lucmar-app\src\pages\pedido\pedido.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
@@ -231,7 +234,7 @@ var ListaClientesPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListaFornecedoresPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -246,29 +249,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the ListaFornecedoresPage page.
+ * Generated class for the SettingsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var ListaFornecedoresPage = /** @class */ (function () {
-    function ListaFornecedoresPage(navCtrl, navParams) {
+var SettingsPage = /** @class */ (function () {
+    function SettingsPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    ListaFornecedoresPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ListaFornecedoresPage');
+    SettingsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad SettingsPage');
     };
-    ListaFornecedoresPage = __decorate([
+    SettingsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-lista-fornecedores',template:/*ion-inline-start:"C:\Users\silas.naves\Documents\ionic\lucmar-app\src\pages\lista-fornecedores\lista-fornecedores.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Fornecedores</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\silas.naves\Documents\ionic\lucmar-app\src\pages\lista-fornecedores\lista-fornecedores.html"*/,
+            selector: 'page-settings',template:/*ion-inline-start:"C:\Users\silas.naves\Documents\ionic\lucmar-app\src\pages\settings\settings.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Configurações</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\silas.naves\Documents\ionic\lucmar-app\src\pages\settings\settings.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], ListaFornecedoresPage);
-    return ListaFornecedoresPage;
+    ], SettingsPage);
+    return SettingsPage;
 }());
 
-//# sourceMappingURL=lista-fornecedores.js.map
+//# sourceMappingURL=settings.js.map
 
 /***/ }),
 
@@ -321,7 +324,7 @@ var ListaPedidosPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListaFornecedoresPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -336,29 +339,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the SettingsPage page.
+ * Generated class for the ListaFornecedoresPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var SettingsPage = /** @class */ (function () {
-    function SettingsPage(navCtrl, navParams) {
+var ListaFornecedoresPage = /** @class */ (function () {
+    function ListaFornecedoresPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    SettingsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad SettingsPage');
+    ListaFornecedoresPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ListaFornecedoresPage');
     };
-    SettingsPage = __decorate([
+    ListaFornecedoresPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-settings',template:/*ion-inline-start:"C:\Users\silas.naves\Documents\ionic\lucmar-app\src\pages\settings\settings.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Configurações</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\silas.naves\Documents\ionic\lucmar-app\src\pages\settings\settings.html"*/,
+            selector: 'page-lista-fornecedores',template:/*ion-inline-start:"C:\Users\silas.naves\Documents\ionic\lucmar-app\src\pages\lista-fornecedores\lista-fornecedores.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Fornecedores</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\silas.naves\Documents\ionic\lucmar-app\src\pages\lista-fornecedores\lista-fornecedores.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], SettingsPage);
-    return SettingsPage;
+    ], ListaFornecedoresPage);
+    return ListaFornecedoresPage;
 }());
 
-//# sourceMappingURL=settings.js.map
+//# sourceMappingURL=lista-fornecedores.js.map
 
 /***/ }),
 
@@ -419,10 +422,10 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/cadastro-pedidos/cadastro-pedidos.module#CadastroPedidosPageModule', name: 'CadastroPedidosPage', segment: 'cadastro-pedidos', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/lista-clientes/lista-clientes.module#ListaClientesPageModule', name: 'ListaClientesPage', segment: 'lista-clientes', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/lista-fornecedores/lista-fornecedores.module#ListaFornecedoresPageModule', name: 'ListaFornecedoresPage', segment: 'lista-fornecedores', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/lista-pedidos/lista-pedidos.module#ListaPedidosPageModule', name: 'ListaPedidosPage', segment: 'lista-pedidos', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/pedido/pedido.module#PedidoPageModule', name: 'PedidoPage', segment: 'pedido', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/lista-pedidos/lista-pedidos.module#ListaPedidosPageModule', name: 'ListaPedidosPage', segment: 'lista-pedidos', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/lista-fornecedores/lista-fornecedores.module#ListaFornecedoresPageModule', name: 'ListaFornecedoresPage', segment: 'lista-fornecedores', priority: 'low', defaultHistory: [] }
                     ]
                 }),
             ],
@@ -457,10 +460,10 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_lista_clientes_lista_clientes__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_lista_fornecedores_lista_fornecedores__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_lista_fornecedores_lista_fornecedores__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_lista_pedidos_lista_pedidos__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_cadastro_pedidos_cadastro_pedidos__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_settings_settings__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_settings_settings__ = __webpack_require__(197);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -502,7 +505,7 @@ var MyApp = /** @class */ (function () {
         this.platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
-            _this.statusBar.overlaysWebView(true);
+            _this.statusBar.overlaysWebView(false);
             _this.statusBar.backgroundColorByHexString('#0f7de1');
             _this.splashScreen.hide();
         });

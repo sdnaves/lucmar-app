@@ -30593,6 +30593,12 @@ myapp .item-md.item-block .item-inner {
   align-self: flex-end;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 page-pedido .avatar-wrapper {
   position: relative;
   width: 200px;

@@ -16,7 +16,7 @@
     <ion-item>{{ item.nome }}</ion-item>
     <ion-item class="item-quantidade">
         <ion-label color="black">Quantidade:</ion-label>
-        <ion-input [(ngModel)]="quantidade" name="quantidade"></ion-input>
+        <ion-input type="number" maxlength="3" [(ngModel)]="quantidade" name="quantidade"></ion-input>
     </ion-item>
     <ion-item-divider></ion-item-divider>
     <ion-item class="item-preco">R$ {{ item.preco }}</ion-item>
